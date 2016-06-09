@@ -1,0 +1,31 @@
+/*
+*/
+/*
+    Created on : Jul 20, 2014, 7:23:43 PM
+    Author     : Fred <mconyango@gmail.com>
+*/
+.my-date-range-picker{
+    background: none repeat scroll 0% 0% #FFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.25), 0px -1px 0px rgba(0, 0, 0, 0.1) inset;
+    color: #333;
+    padding: 6px;
+    line-height: 10px;
+    cursor: pointer;
+}
+.colors{
+    color:#2f7ed8;
+    color:#0d233a;
+    color: #c92a9b;
+    color: #23eb55;
+    color:#910000;
+    color: #1aadce;
+    color: #ff0;
+    color: #492970;
+    color: #f28f43;
+    color: #77a1e5;
+    color: #c42525;
+    color: #c6c92a;
+    color:#434348;
+    color: #FDD01C;
+    color:#8bbc21;
+}

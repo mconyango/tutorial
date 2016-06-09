@@ -1,0 +1,59 @@
+/*
+    Created on : Oct 26, 2014, 10:55:21 PM
+    Author     : mconyango <mconyango@gmail.com>
+*/
+.menu-on-top .menu-item-parent {
+    max-width: 100%;
+    min-width: 50px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-size: 13px;
+}
+
+.menu-on-top nav ul ul li:hover > a:after, .menu-on-top nav > ul ul > li a:after, .menu-on-top nav > ul ul > li a:hover:after, .menu-on-top nav > ul > li > a:after {
+    top: 9px;
+    right: auto;
+}
+
+.menu-on-top nav ul ul, .menu-on-top nav ul ul ul {
+    text-align: left;
+}
+
+.smart-style-3 nav > ul > li {
+    background-color: #F2F2F2;
+    background-image: linear-gradient(to bottom, #F9F9F9, #F2F2F2);
+    border-bottom: 1px solid #DFDFDF;
+    width: 11%;
+    text-align: center;
+}
+
+.smart-style-3 nav > ul > li:last-child {
+    width: 12%;
+}
+
+.smart-style-2s nav > ul > li {
+    width: 14%;
+}
+
+.smart-style-2s nav > ul > li:last-child {
+    width: 16%;
+}
+
+.menu-on-top #mobile-profile-img a.userdropdown img {
+    width: 30px;
+    margin-top: 0px;
+    margin-left: 0px;
+    border-radius: 3px;
+    border: 1px solid rgba(53, 120, 58, 1) !important;
+}
+
+.smart-style-2 .page-footer, .smart-style-3 .page-footer {
+    border-top: 1px solid #CECECE;
+    background-color: inherit;
+}
+
+.ui-widget {
+    font-size: 1.0em;
+}

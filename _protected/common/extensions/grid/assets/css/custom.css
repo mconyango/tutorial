@@ -1,0 +1,15 @@
+table.kv-grid-table thead th {
+    text-transform: uppercase;
+}
+
+table.kv-grid-table tbody td a + a {
+    margin-left: 15px;
+}
+
+table.kv-grid-table tr.linkable:hover {
+    cursor: pointer;
+}
+
+.grid-view table > thead th > a {
+    color: #5E5E5E;
+}
