@@ -1,5 +1,5 @@
 # how to set-up & run the project
-The following will guide you through setting up the project on your local PC. If you already have the project on your PC, check the #Other setup section below
+The following will guide you through setting up the project on your local PC.
 # pre-requisites
 + php version 5.5+
 + Mysql version 5.5+
