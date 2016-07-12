@@ -28,5 +28,3 @@ phpunit.phar
 
 composer.lock
 size_git.sh
-
-/_protected/common/config/db.php

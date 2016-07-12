@@ -45,7 +45,9 @@ trait ActiveSearchTrait
         $params = ArrayHelper::getValue($this->_searchOptions, 'params', []);
         $pageSize = ArrayHelper::getValue($this->_searchOptions, 'pageSize', Yii::$app->setting->get(Constants::SECTION_SYSTEM, Constants::KEY_ITEMS_PER_PAGE, 30));
         $enablePagination = ArrayHelper::getValue($this->_searchOptions, 'enablePagination', true);
-        $query = static::find()->where($condition, $params);
+        $query = $this->find();
+        $query->andWhere($condition);
+        $query->addParams($params);
 
         if ($enablePagination) {
             $pagination = [
