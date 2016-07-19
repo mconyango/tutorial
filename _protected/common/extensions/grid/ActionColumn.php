@@ -47,11 +47,11 @@ class ActionColumn extends \kartik\grid\ActionColumn
                 $options = ArrayHelper::merge(['title' => $title, 'data-pjax' => '0', 'class' => 'show_modal_form', 'data-grid' => $model->shortClassName() . '-grid-pjax'], $options);
                 if ($this->_isDropdown) {
                     $options['tabindex'] = '-1';
-                    $link = \Yii::$app->user->canUpdate($this->grid->view->context->resource) ? Html::a($label, $url, $options) : '';
+                    $link =  Html::a($label, $url, $options);
                     $li = !empty($link) ? '<li>' . $link . '</li>' . PHP_EOL : '';
                     return $li;
                 } else {
-                    return \Yii::$app->user->canUpdate($this->grid->view->context->resource) ? Html::a($label, $url, $options) : '';
+                    return  Html::a($label, $url, $options);
                 }
             };
         }
@@ -74,11 +74,11 @@ class ActionColumn extends \kartik\grid\ActionColumn
                 );
                 if ($this->_isDropdown) {
                     $options['tabindex'] = '-1';
-                    $link = \Yii::$app->user->canDelete($this->grid->view->context->resource) ? Html::a($label, 'javascript:void(0);', $options) : '';
+                    $link = Html::a($label, 'javascript:void(0);', $options);
                     $li = !empty($link) ? '<li>' . $link . '</li>' . PHP_EOL : '';
                     return $li;
                 } else {
-                    return \Yii::$app->user->canDelete($this->grid->view->context->resource) ? Html::a($label, 'javascript:void(0);', $options) : '';
+                    return Html::a($label, 'javascript:void(0);', $options);
                 }
             };
         }

@@ -2,6 +2,9 @@
 
 namespace backend\models;
 
+use common\models\ActiveRecord;
+use common\models\ActiveSearchInterface;
+use common\models\ActiveSearchTrait;
 use Yii;
 
 /**
@@ -12,8 +15,9 @@ use Yii;
  *
  * @property Subcategory[] $subcategories
  */
-class Category extends \common\models\ActiveRecord
+class Category extends ActiveRecord implements ActiveSearchInterface
 {
+    use ActiveSearchTrait;
     /**
      * @inheritdoc
      */
@@ -30,6 +34,7 @@ class Category extends \common\models\ActiveRecord
         return [
             [['name'], 'required'],
             [['name'], 'string', 'max' => 128],
+            [[self::SEARCH_FIELD],'safe','on'=>self::SCENARIO_SEARCH],
         ];
     }
 
@@ -51,4 +56,16 @@ class Category extends \common\models\ActiveRecord
     {
         return $this->hasMany(Subcategory::className(), ['category_id' => 'id']);
     }
+
+    /**
+     * @inheritdoc
+     */
+    public function searchParams()
+    {
+        return [
+            ['name','name'],
+        ];
+    }
+
+
 }

@@ -1,5 +1,6 @@
 <?php
 use common\helpers\Lang;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 ?>
@@ -21,6 +22,11 @@ use common\helpers\Lang;
             <li class="<?= $this->context->activeMenu === 1 ? 'active' : '' ?>">
                 <a href="<?= Yii::$app->homeUrl ?>"><i class="fa fa-lg fa-fw fa-list text-danger"></i>
                     <span class="menu-item-parent"><?= Lang::t('DEPENDENT LISTS') ?></span></a>
+            </li>
+
+            <li class="<?= $this->context->activeMenu === 1 ? 'active' : '' ?>">
+                <a href="<?= Url::to(['category/index'])?>"><i class="fa fa-lg fa-fw fa-list text-danger"></i>
+                    <span class="menu-item-parent"><?= Lang::t('CATEGORIES') ?></span></a>
             </li>
         </ul>
     </nav>
